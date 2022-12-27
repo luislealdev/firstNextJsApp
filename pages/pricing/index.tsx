@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { FC, PropsWithChildren } from "react";
 import { DarkLayout } from "../../components/layout/DarkLayout";
 import { MainLayout } from "../../components/layout/MainLayout";
 
@@ -10,7 +11,7 @@ export default function index() {
   );
 }
 
-index.getLayout = function getLayout(page) {
+index.getLayout = function getLayout(page: any) {
   return (
     <MainLayout>
       <DarkLayout>{page}</DarkLayout>
