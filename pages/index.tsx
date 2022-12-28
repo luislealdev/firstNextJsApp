@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ReactElement, JSXElementConstructor, ReactFragment, ReactPortal } from "react";
 import { DarkLayout } from "../components/layout/DarkLayout";
 import { MainLayout } from "../components/layout/MainLayout";
 
@@ -10,7 +11,7 @@ export default function HomePage() {
   );
 }
 
-HomePage.getLayout = function getLayout(page) {
+HomePage.getLayout = function getLayout(page: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | ReactFragment | ReactPortal | null | undefined) {
   return (
     <MainLayout>
       <DarkLayout>{page}</DarkLayout>
